@@ -13,11 +13,17 @@ required = [
 
 [[constraint]]
   name = "sigs.k8s.io/controller-tools"
-  branch = "master"
+  source = "https://github.com/detiber/controller-tools.git"
+  branch="k8s-1.13"
+
+[[constraint]]
+  name="sigs.k8s.io/controller-runtime"
+  source = "https://github.com/detiber/controller-runtime.git"
+  branch="k8s-1.13"
 
 [[constraint]]
   name="k8s.io/code-generator"
-  version="kubernetes-1.12.3"
+  version="kubernetes-1.13.1"
 
 # For dependency below: Refer to issue https://github.com/golang/dep/issues/1799
 [[override]]

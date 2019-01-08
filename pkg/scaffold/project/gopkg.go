@@ -146,11 +146,13 @@ name="{{ .Name }}"
 
 [[constraint]]
   name="sigs.k8s.io/controller-runtime"
-  version="v0.1.1"
+  source = "https://github.com/detiber/controller-runtime.git"
+  branch="k8s-1.13"
 
 [[constraint]]
   name="sigs.k8s.io/controller-tools"
-  version="v0.1.1"
+  source = "https://github.com/detiber/controller-tools.git"
+  branch="k8s-1.13"
 
 # For dependency below: Refer to issue https://github.com/golang/dep/issues/1799
 [[override]]

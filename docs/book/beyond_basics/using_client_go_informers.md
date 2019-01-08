@@ -27,7 +27,7 @@ err := mgr.Add(manager.RunnableFunc(func(s <-chan struct{}) error {
     return nil
 }))
 if err != nil {
-    glog.Fatalf("error Adding InformerFactory to the Manager: %v", err)
+    klog.Fatalf("error Adding InformerFactory to the Manager: %v", err)
 }
 ```
 {% endmethod %}
@@ -54,7 +54,7 @@ err := ctrl.Watch(
     &handler.EnqueueRequestForObject{},
 )
 if err != nil {
-    glog.Fatalf("error Watching Services: %v", err)
+    klog.Fatalf("error Watching Services: %v", err)
 }
 ```
 {% endmethod %}

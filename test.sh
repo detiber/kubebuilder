@@ -84,7 +84,7 @@ EOF
 }
 
 function test_create_namespaced_coretype_controller {
-  header_text "performing creating coretype controller"
+  header_text "performing creating namespaced coretype controller"
   kubebuilder create api --group apps --version v1 --kind Deployment --namespaced true <<EOF
 n
 y
@@ -129,8 +129,10 @@ test_create_namespaced_coretype_controller
 
 cd $GOPATH/src/sigs.k8s.io/kubebuilder
 
+header_text "running project go tests"
 go test ./cmd/... ./pkg/...
 
+header_text "testing test project"
 cd test/project
 make
 cd -
